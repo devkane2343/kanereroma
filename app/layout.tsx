@@ -7,9 +7,12 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "John Doe - Front-End Developer Portfolio",
+  title: "Kane Reroma - Web Developer",
   description: "Portfolio website showcasing my work as a front-end developer and tech enthusiast",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.png",
+  },
 }
 
 export default function RootLayout({
