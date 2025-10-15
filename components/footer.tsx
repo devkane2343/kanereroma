@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">© {currentYear} John Doe. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">© {currentYear} Kane Dev. All rights reserved.</p>
           <div className="flex gap-6">
             <button
               onClick={() => {
