@@ -42,6 +42,45 @@ export function Hero() {
           Crafting immersive digital experiences with cutting-edge technologies and pixel-perfect precision
         </p>
 
+        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 mb-12 opacity-80">
+          <img
+            src="https://cdn.simpleicons.org/nextdotjs/FFFFFF"
+            alt="Next.js"
+            title="Next.js"
+            className="h-8 w-auto dark:opacity-90"
+            loading="lazy"
+          />
+          <img
+            src="https://cdn.simpleicons.org/typescript/3178C6"
+            alt="TypeScript"
+            title="TypeScript"
+            className="h-8 w-auto"
+            loading="lazy"
+          />
+          <img
+            src="https://cdn.simpleicons.org/react/61DAFB"
+            alt="React"
+            title="React"
+            className="h-8 w-auto animate-spin motion-reduce:animate-none"
+            style={{ animationDuration: "14s" }}
+            loading="lazy"
+          />
+          <img
+            src="https://cdn.simpleicons.org/sass/CC6699"
+            alt="Sass/SCSS"
+            title="Sass / SCSS"
+            className="h-8 w-auto"
+            loading="lazy"
+          />
+          <img
+            src="https://cdn.simpleicons.org/tailwindcss/06B6D4"
+            alt="Tailwind CSS"
+            title="Tailwind CSS"
+            className="h-8 w-auto"
+            loading="lazy"
+          />
+        </div>
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button size="lg" onClick={scrollToProjects} className="group min-w-[180px]">
             View My Work
