@@ -49,43 +49,46 @@ export function Navbar() {
             Portfolio
           </button>
 
-          <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection("projects")}
-              className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
-            >
-              Projects
-            </button>
-            <button
-              onClick={() => scrollToSection("experience")}
-              className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
-            >
-              Experience
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
-            >
-              Contact
-            </button>
-            <ProfileViews />
-          </div>
+          <div className="flex items-center gap-4 md:gap-8">
+            <div className="hidden md:flex items-center gap-8">
+              <button
+                onClick={() => scrollToSection("about")}
+                className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
+              >
+                About
+              </button>
+              <button
+                onClick={() => scrollToSection("projects")}
+                className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => scrollToSection("experience")}
+                className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
+              >
+                Experience
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
+              >
+                Contact
+              </button>
+            </div>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsDark(!isDark)}
-            className="rounded-full"
-          >
-            {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-            <span className="sr-only">Toggle theme</span>
-          </Button>
+            <ProfileViews />
+
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsDark(!isDark)}
+              className="rounded-full"
+            >
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              <span className="sr-only">Toggle theme</span>
+            </Button>
+          </div>
         </div>
       </div>
     </nav>
