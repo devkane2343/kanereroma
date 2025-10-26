@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import ProfileViews from "./profile-views"
 
 export function Navbar() {
   // ✅ Default mode is now dark
@@ -73,6 +74,7 @@ export function Navbar() {
             >
               Contact
             </button>
+            <ProfileViews />
           </div>
 
           <Button
