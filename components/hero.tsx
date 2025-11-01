@@ -34,7 +34,7 @@ export function Hero() {
         <div className="flex items-center justify-center gap-3 mb-8">
           <Code2 className="h-6 w-6 text-primary" />
           <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground text-balance">
-            Front-End Developer | Systems Developer
+            Full-Stack Developer | Systems Developer
           </p>
         </div>
 
