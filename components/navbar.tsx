@@ -56,7 +56,7 @@ export function Navbar() {
               <SheetContent side="left" className="w-[280px] sm:w-80">
                 <div className="flex flex-col h-full">
                   <SheetHeader className="pb-6 border-b border-border">
-                    <SheetTitle className="text-2xl font-bold text-primary">Portfolio</SheetTitle>
+                    <SheetTitle className="text-2xl font-bold text-primary">I.T. Porfolio</SheetTitle>
                   </SheetHeader>
                   <nav className="flex-1 py-6">
                     <div className="flex flex-col gap-1">
@@ -116,7 +116,7 @@ export function Navbar() {
             onClick={() => scrollToSection("hero")}
             className="text-xl font-bold text-primary hover:text-primary/80 transition-colors hidden md:block"
           >
-            Portfolio
+            I.T. Portfolio
           </button>
 
           <div className="flex items-center gap-4 md:gap-8">
