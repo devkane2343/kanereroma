@@ -42,48 +42,55 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl font-bold text-foreground mb-4 text-center animate-fade-in-up">Featured Projects</h2>
-        <div className="w-20 h-1 bg-primary mx-auto mb-12 rounded-full" />
+    <section id="projects" className="min-h-screen flex flex-col justify-center py-8 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2 animate-fade-in-up">Featured Projects</h2>
+          <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in-up group border-border/50"
+              className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in-up group border-border/50 flex flex-col"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="relative overflow-hidden aspect-video">
+              <div className="relative overflow-hidden aspect-[4/3]">
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-2">{project.title}</h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, tagIndex) => (
+              <div className="p-4 flex flex-col flex-1">
+                <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-1">{project.title}</h3>
+                <p className="text-sm text-muted-foreground mb-3 leading-snug line-clamp-2 flex-1">{project.description}</p>
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  {project.tags.slice(0, 2).map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full"
+                      className="px-2 py-0.5 text-[10px] font-medium bg-primary/10 text-primary rounded-full"
                     >
                       {tag}
                     </span>
                   ))}
+                  {project.tags.length > 2 && (
+                    <span className="px-2 py-0.5 text-[10px] font-medium bg-primary/10 text-primary rounded-full">
+                      +{project.tags.length - 2}
+                    </span>
+                  )}
                 </div>
-                <div className="flex gap-3">
-                  <Button variant="default" size="sm" asChild>
+                <div className="flex gap-2 mt-auto">
+                  <Button variant="default" size="sm" className="text-xs px-3 py-1.5 h-auto flex-1" asChild>
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Live Demo
+                      <ExternalLink className="h-3 w-3 mr-1.5" />
+                      Demo
                     </a>
                   </Button>
-                  <Button variant="outline" size="sm" asChild>
+                  <Button variant="outline" size="sm" className="text-xs px-3 py-1.5 h-auto flex-1" asChild>
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4 mr-2" />
+                      <Github className="h-3 w-3 mr-1.5" />
                       Code
                     </a>
                   </Button>
