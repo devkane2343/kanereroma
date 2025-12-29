@@ -79,6 +79,13 @@ export function Hero() {
             className="h-8 w-auto"
             loading="lazy"
           />
+          <img
+            src="https://cdn.simpleicons.org/n8n/FF6D5A"
+            alt="n8n"
+            title="n8n"
+            className="h-8 w-auto"
+            loading="lazy"
+          />
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
