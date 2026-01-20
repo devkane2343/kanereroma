@@ -34,7 +34,7 @@ function NetworkNodes() {
   }, [])
 
   const lines = useMemo(() => {
-    const lineGeometries: THREE.BufferGeometry[] = []
+    const lineObjects: THREE.Line[] = []
     for (let i = 0; i < nodes.length; i++) {
       for (let j = i + 1; j < nodes.length; j++) {
         const distance = Math.sqrt(
@@ -45,11 +45,13 @@ function NetworkNodes() {
         if (distance < 4) {
           const points = [new THREE_NS.Vector3(...nodes[i]), new THREE_NS.Vector3(...nodes[j])]
           const geometry = new THREE_NS.BufferGeometry().setFromPoints(points)
-          lineGeometries.push(geometry)
+          const material = new THREE_NS.LineBasicMaterial({ color: "#3b82f6", transparent: true, opacity: 0.3 })
+          const line = new THREE_NS.Line(geometry, material)
+          lineObjects.push(line)
         }
       }
     }
-    return lineGeometries
+    return lineObjects
   }, [nodes])
 
   useFrame((state) => {
@@ -66,10 +68,8 @@ function NetworkNodes() {
           <meshStandardMaterial color="#60a5fa" emissive="#3b82f6" emissiveIntensity={0.5} />
         </mesh>
       ))}
-      {lines.map((geometry, i) => (
-        <line key={i} geometry={geometry}>
-          <lineBasicMaterial color="#3b82f6" transparent opacity={0.3} />
-        </line>
+      {lines.map((line, i) => (
+        <primitive key={i} object={line} />
       ))}
     </group>
   )
@@ -107,7 +107,7 @@ function DataParticles() {
   return (
     <points ref={particlesRef}>
       <bufferGeometry>
-        <bufferAttribute attach="attributes-position" count={particleCount} array={positions} itemSize={3} />
+        <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
       <pointsMaterial size={0.08} color="#60a5fa" transparent opacity={0.6} sizeAttenuation />
     </points>
