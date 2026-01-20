@@ -66,6 +66,20 @@ export function Hero() {
             loading="lazy"
           />
           <img
+            src="https://cdn.simpleicons.org/javascript/F7DF1E"
+            alt="JavaScript"
+            title="JavaScript"
+            className="h-8 w-auto"
+            loading="lazy"
+          />
+          <img
+            src="https://cdn.simpleicons.org/python/3776AB"
+            alt="Python"
+            title="Python"
+            className="h-8 w-auto"
+            loading="lazy"
+          />
+          <img
             src="https://cdn.simpleicons.org/sass/CC6699"
             alt="Sass/SCSS"
             title="Sass / SCSS"
