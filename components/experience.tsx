@@ -4,19 +4,25 @@ import { Briefcase, GraduationCap, Award } from "lucide-react"
 const experiences = [
   {
     type: "work",
-    title: "I.T. Systems Developer (AI) / NTTC Staff",
-    organization: "TESDA Regional Office VII",
+    title: "API Integration Developer",
+    organization: "Gridline Analytics USA",
     period: "2023 - Present",
-    description: "Developed enterprise web applications for TESDA Regional Office VII",
-    highlights: ["DMS", "Online NTTC System", "Regional Website", "Dashboard"],
+    description: "Created a comprehensive billing system for their fleet of trucks, automating invoice generation and financial management",
+    highlights: ["n8n", "Gridline API", "Duda", "Automation"],
+    icon: "/gridlinelogo.png",
   },
   {
     type: "work",
-    title: "IT Support Staff",
-    organization: "Provincial Training Center - Minglanilla",
+    title: "IT Systems Developer",
+    organization: "Regional Office VII, TESDA",
     period: "March 2023",
     description: "Developed responsive web applications with focus on inventory management",
-    highlights: ["Vanilla JS", "HTML", "SCSS", "Webpack"],
+    highlights: ["Next.JS, Vanilla JS", "HTML", "SCSS", "Webpack"],
+    icon: "/tesda.png",
+    timeline: [
+      { role: "Intern", period: "Jan 2023 - Feb 2023" },
+      { role: "IT Support Staff", period: "March 2023" },
+    ],
   },
   {
     type: "education",
@@ -53,8 +59,20 @@ export function Experience() {
               className="p-4 hover:shadow-lg transition-all duration-300 border-border/50 flex flex-col"
             >
               <div className="flex items-start gap-3 mb-3">
-                <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
-                  {exp.type === "work" ? (
+                <div
+                  className={`rounded-lg shrink-0 flex items-center justify-center overflow-visible ${
+                    exp.icon
+                      ? "size-12 bg-white border border-border/50"
+                      : "p-2 bg-primary/10 text-primary"
+                  }`}
+                >
+                  {exp.icon ? (
+                    <img
+                      src={exp.icon}
+                      alt={exp.organization}
+                      className="h-10 w-10 object-contain mix-blend-multiply"
+                    />
+                  ) : exp.type === "work" ? (
                     <Briefcase className="h-5 w-5" />
                   ) : (
                     <GraduationCap className="h-5 w-5" />
@@ -73,6 +91,19 @@ export function Experience() {
               <p className="text-sm text-foreground/70 mb-3 leading-snug">
                 {exp.description}
               </p>
+              {exp.timeline && (
+                <div className="mb-3 pl-1 border-l-2 border-primary/20">
+                  {exp.timeline.map((item, idx) => (
+                    <div key={idx} className="mb-2 last:mb-0">
+                      <div className="flex items-center gap-2 mb-0.5">
+                        <div className="h-1.5 w-1.5 rounded-full bg-primary shrink-0 -ml-[5px]" />
+                        <span className="text-xs font-medium text-foreground">{item.role}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground ml-3">{item.period}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
               <div className="flex flex-wrap gap-1.5 mt-auto">
                 {exp.highlights.map((skill, skillIndex) => (
                   <span
