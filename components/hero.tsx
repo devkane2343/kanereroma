@@ -102,6 +102,44 @@ export function Hero() {
           />
         </div>
 
+        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 mb-12 opacity-80">
+          <img
+            src="https://cdn.simpleicons.org/github/FFFFFF"
+            alt="GitHub"
+            title="GitHub"
+            className="h-8 w-auto dark:opacity-90"
+            loading="lazy"
+          />
+          <img
+            src="https://cdn.simpleicons.org/git/F05032"
+            alt="Git"
+            title="Git"
+            className="h-8 w-auto"
+            loading="lazy"
+          />
+          <img
+            src="https://cdn.simpleicons.org/wordpress/21759B"
+            alt="WordPress"
+            title="WordPress"
+            className="h-8 w-auto"
+            loading="lazy"
+          />
+          <img
+            src="https://cdn.simpleicons.org/supabase/3ECF8E"
+            alt="Supabase"
+            title="Supabase"
+            className="h-8 w-auto"
+            loading="lazy"
+          />
+          <img
+            src="https://cdn.simpleicons.org/vercel/FFFFFF"
+            alt="Vercel"
+            title="Vercel"
+            className="h-8 w-auto dark:opacity-90"
+            loading="lazy"
+          />
+        </div>
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button size="lg" onClick={scrollToProjects} className="group min-w-[180px]">
             View My Work
