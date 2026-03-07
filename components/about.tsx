@@ -28,17 +28,17 @@ export function About() {
   return (
     <section id="about" className="min-h-screen flex flex-col justify-center py-8 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="container mx-auto max-w-5xl">
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">About Me</h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
-          <div>
-            <div className="aspect-square rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center max-w-xs mx-auto">
-              <img 
-                src="/profile.jpg" 
-                alt="Profile" 
+          <div className="animate-fade-in-up">
+            <div className="aspect-square rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center max-w-xs mx-auto overflow-hidden transition-transform duration-500 hover:scale-[1.02]">
+              <img
+                src="/ProfP.png"
+                alt="Profile"
                 className="rounded-xl w-full h-full object-cover"
                 width={300}
                 height={300}
@@ -46,15 +46,17 @@ export function About() {
             </div>
           </div>
 
-          <div className="space-y-4">
-            <p className="text-base sm:text-lg text-foreground/90 leading-relaxed">
-              I&apos;m a <strong>full stack developer</strong> with proven experience building and deploying production web applications. 
-              Rather than memorizing syntax, I leverage <strong>AI-powered tools</strong> to work efficiently and stay current with 
-              modern development practices.
+          <div className="space-y-5">
+            <p className="text-base sm:text-lg text-foreground/90 leading-relaxed animate-about-para">
+              I&apos;m a <strong>full stack developer</strong> who bridges design and engineering—building web applications
+              that are both robust and delightful to use. I thrive on turning complex requirements into intuitive, 
+              scalable solutions that make a real impact.
             </p>
-            <p className="text-base sm:text-lg text-foreground/90 leading-relaxed">
-              With 3+ years of hands-on experience, I&apos;ve designed and developed systems for government institutions and 
-              organizations. I focus on creating clean, functional solutions that solve real-world problems.
+            <p className="text-base sm:text-lg text-foreground/90 leading-relaxed animate-about-para-delayed">
+              With over three years of experience delivering production systems for government institutions and 
+              private organizations, I combine <strong>modern tech stacks</strong> with <strong>AI-assisted workflows</strong> to 
+              ship faster without compromising quality. My focus: clean architecture, thoughtful UX, and code that 
+              stands the test of time.
             </p>
           </div>
         </div>
@@ -65,9 +67,15 @@ export function About() {
             return (
               <Card
                 key={`${skill.title}-${index}`}
-                className="p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 text-center"
+                className="about-skill-card group p-4 border-border/50 text-center cursor-default
+                  transition-all duration-500 ease-out
+                  hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5
+                  hover:border-primary/30 hover:bg-card/80
+                  [&:hover_svg]:scale-110 [&:hover_svg]:transition-transform [&:hover_svg]:duration-300"
               >
-                <IconComponent className="h-8 w-8 text-primary mb-3 mx-auto" />
+                <div className="rounded-lg bg-primary/5 p-3 w-fit mx-auto mb-3 transition-colors duration-300 group-hover:bg-primary/10">
+                  <IconComponent className="h-8 w-8 text-primary" />
+                </div>
                 <h3 className="text-sm font-semibold text-foreground mb-1.5">{skill.title}</h3>
                 <p className="text-xs text-muted-foreground">{skill.description}</p>
               </Card>

@@ -130,3 +130,47 @@
     scroll-behavior: smooth;
   }
 }
+
+/* About section animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-about-para {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-about-para-delayed {
+  opacity: 0;
+  animation: fade-in 0.8s ease-out 0.2s forwards;
+}
+
+.about-skill-card {
+  animation: fade-in-up 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.about-skill-card:nth-child(1) { animation-delay: 0.1s; }
+.about-skill-card:nth-child(2) { animation-delay: 0.2s; }
+.about-skill-card:nth-child(3) { animation-delay: 0.3s; }
+.about-skill-card:nth-child(4) { animation-delay: 0.4s; }

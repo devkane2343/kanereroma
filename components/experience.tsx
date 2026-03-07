@@ -8,11 +8,11 @@ const experiences = [
   {
     type: "work",
     title: "API Integration Developer",
-    organization: "Gridline Analytics USA",
-    period: "2025 - Present",
+    organization: "Simple.biz / Gridline Analytics USA",
+    period: "November 2025 - Present",
     location: "Remote",
     description: "Created a comprehensive billing system for their fleet of trucks, automating invoice generation and financial management",
-    highlights: ["Python","n8n", "Gridline API", "Duda", "Automation"],
+    highlights: ["Python API Integrations", "Gridline Billing System", "n8n Automation", "Next.JS FullStack Development"],
     icon: "/gridlinelogo.png",
     achievements: [
       "Automated invoice generation process",
@@ -23,14 +23,14 @@ const experiences = [
     type: "work",
     title: "IT Systems Developer",
     organization: "Regional Office VII, TESDA",
-    period: "March 2023",
+    period: "March 2023 - November 2025",
     location: "Cebu, Philippines",
     description: "Developed responsive web applications with focus on inventory management",
-    highlights: ["Next.JS, Vanilla JS", "HTML", "SCSS", "Webpack"],
+    highlights: ["TESDA VII - Website", "Document Manage System", "Trainor Application System", "Regional Dashboard"],
     icon: "/tesda.png",
     timeline: [
-      { role: "Intern", period: "Jan 2023 - Feb 2023" },
-      { role: "IT Support Staff", period: "March 2023" },
+      { role: "Intern", period: "March 2023 - June 2023" },
+      { role: "Full time Employee", period: "June 2023 - November 2025" },
     ],
     achievements: [
       "Built responsive web applications",
@@ -41,7 +41,7 @@ const experiences = [
     type: "education",
     title: "BS in Information Technology",
     organization: "St. Cecilia's College Inc.",
-    period: "2019-2023",
+    period: "",
     location: "Cebu, Philippines",
     description: "Graduated with honors • Web technologies & software engineering",
     highlights: ["CSS NC II", "Web Development", "UI/UX", "E-Commerce"],
@@ -125,11 +125,15 @@ export function Experience() {
                       {exp.organization}
                     </p>
                     <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                      <Calendar className="h-3.5 w-3.5" />
-                      <span>{exp.period}</span>
+                      {exp.period && (
+                        <>
+                          <Calendar className="h-3.5 w-3.5" />
+                          <span>{exp.period}</span>
+                        </>
+                      )}
                       {exp.location && (
                         <>
-                          <span>•</span>
+                          {exp.period && <span>•</span>}
                           <span>{exp.location}</span>
                         </>
                       )}
