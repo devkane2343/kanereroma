@@ -25,6 +25,16 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "Financial Tracker",
+    description:
+      "A financial tracker app that provides insights into your financial status, helping you plan and manage your money. Planning to integrate an LLM to assist users with personalized financial advice and recommendations.",
+    image: "/1.png",
+    gallery: ["/1.png", "/2.png", "/3.png"],
+    tags: ["Next.js", "TypeScript", "Tailwind", "LLM (planned)"],
+    liveUrl: "https://ktr-financial-tracker.vercel.app/",
+    githubUrl: "#",
+  },
+  {
     title: "Document Management System",
     description:
       "A web-based platform that automates document tracking and numbering, streamlining communication and improving efficiency in administrative processes.",
