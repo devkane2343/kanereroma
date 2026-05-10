@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#0e1a2b"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bg2)"/>
+  <g stroke="#334155" stroke-width="2" fill="none">
+    <path d="M 200 400 C 280 400, 320 250, 460 250"/>
+    <path d="M 200 400 C 280 400, 320 400, 460 400"/>
+    <path d="M 200 400 C 280 400, 320 550, 460 550"/>
+    <path d="M 700 250 C 800 250, 840 250, 920 250"/>
+    <path d="M 700 400 C 800 400, 840 400, 920 400"/>
+    <path d="M 700 550 C 800 550, 840 550, 920 550"/>
+  </g>
+  <circle cx="200" cy="400" r="36" fill="url(#node)" stroke="#22d3ee" stroke-width="2"/>
+  <text x="200" y="406" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#22d3ee">START</text>
+  <g>
+    <rect x="460" y="220" width="240" height="60" rx="8" fill="url(#node)" stroke="#3b82f6"/>
+    <text x="480" y="245" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">attio.com</text>
+    <text x="480" y="265" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">Get New Bids</text>
+  </g>
+  <g>
+    <rect x="460" y="370" width="240" height="60" rx="8" fill="url(#node)" stroke="#3b82f6"/>
+    <text x="480" y="395" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">code.js</text>
+    <text x="480" y="415" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">Score &amp; Filter</text>
+  </g>
+  <g>
+    <rect x="460" y="520" width="240" height="60" rx="8" fill="url(#node)" stroke="#3b82f6"/>
+    <text x="480" y="545" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">postgres</text>
+    <text x="480" y="565" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">Persist Record</text>
+  </g>
+  <g>
+    <rect x="920" y="220" width="240" height="60" rx="8" fill="url(#node)" stroke="#22d3ee"/>
+    <text x="940" y="245" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">slack</text>
+    <text x="940" y="265" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">Notify Team</text>
+  </g>
+  <g>
+    <rect x="920" y="370" width="240" height="60" rx="8" fill="url(#node)" stroke="#22d3ee"/>
+    <text x="940" y="395" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">docsautomator</text>
+    <text x="940" y="415" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">Generate Doc</text>
+  </g>
+  <g>
+    <rect x="920" y="520" width="240" height="60" rx="8" fill="url(#node)" stroke="#22d3ee"/>
+    <text x="940" y="545" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">softr</text>
+    <text x="940" y="565" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">Update Dashboard</text>
+  </g>
+  <text x="640" y="60" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14" fill="#64748b">N8N · BID TRACKING WORKFLOW</text>
+  <text x="640" y="780" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#475569">POWERHOUSE VENTURES · AUTOMATION</text>
+</svg>

@@ -1,50 +1,39 @@
 "use client"
 
+const links = [
+  { id: "about", label: "About" },
+  { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
+  { id: "skills", label: "Skills" },
+  { id: "contact", label: "Contact" },
+]
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
+  const scroll = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
 
   return (
-    <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border bg-muted/30">
+    <footer className="border-t border-border py-10 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-6xl">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">© {currentYear} Kane Dev. All rights reserved.</p>
-          <div className="flex gap-6">
-            <button
-              onClick={() => {
-                const element = document.getElementById("about")
-                if (element) element.scrollIntoView({ behavior: "smooth" })
-              }}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              About
-            </button>
-            <button
-              onClick={() => {
-                const element = document.getElementById("projects")
-                if (element) element.scrollIntoView({ behavior: "smooth" })
-              }}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Projects
-            </button>
-            <button
-              onClick={() => {
-                const element = document.getElementById("experience")
-                if (element) element.scrollIntoView({ behavior: "smooth" })
-              }}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Experience
-            </button>
-            <button
-              onClick={() => {
-                const element = document.getElementById("contact")
-                if (element) element.scrollIntoView({ behavior: "smooth" })
-              }}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Contact
-            </button>
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <p className="font-mono text-xs text-muted-foreground mb-1">// © {currentYear}</p>
+            <p className="text-sm text-foreground">
+              Jan Kane T. Reroma · Built with{" "}
+              <span className="font-mono text-primary">Next.js</span> &{" "}
+              <span className="font-mono text-primary">Tailwind</span>
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            {links.map((l) => (
+              <button
+                key={l.id}
+                onClick={() => scroll(l.id)}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {l.label}
+              </button>
+            ))}
           </div>
         </div>
       </div>

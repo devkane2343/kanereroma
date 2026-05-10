@@ -7,11 +7,40 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Kane Reroma - Web Developer",
-  description: "Portfolio website showcasing my work as a front-end developer and tech enthusiast",
-  generator: "v0.app",
+  title: "Jan Kane Reroma — Full-Stack Developer & Systems Architect",
+  description:
+    "Full-Stack Web Developer and Systems Architect specializing in Next.js, React, Node.js, Supabase, n8n, and AI Automation. I design and deploy scalable, production-grade systems that turn business operations into measurable outcomes.",
+  keywords: [
+    "Full-Stack Developer",
+    "Systems Architect",
+    "Next.js",
+    "React",
+    "Node.js",
+    "Supabase",
+    "n8n",
+    "AI Automation",
+    "API Integration",
+    "Jan Kane Reroma",
+    "Kane Reroma",
+  ],
+  authors: [{ name: "Jan Kane T. Reroma" }],
   icons: {
     icon: "/favicon.png",
+  },
+  openGraph: {
+    title: "Jan Kane Reroma — Full-Stack Developer & Systems Architect",
+    description:
+      "Production-grade web systems, AI automation, and scalable API integrations. Building end-to-end solutions that drive operational change.",
+    url: "https://kanereroma.vercel.app",
+    siteName: "Jan Kane Reroma",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jan Kane Reroma — Full-Stack Developer & Systems Architect",
+    description:
+      "Production-grade web systems, AI automation, and scalable API integrations.",
   },
 }
 

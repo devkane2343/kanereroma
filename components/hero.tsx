@@ -1,15 +1,25 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowDown, Code2, Sparkles } from "lucide-react"
+import { ArrowDown, ArrowUpRight } from "lucide-react"
 import { ThreeScene } from "./three-scene"
+
+const techStack = [
+  { src: "https://cdn.simpleicons.org/nextdotjs/FFFFFF", alt: "Next.js" },
+  { src: "https://cdn.simpleicons.org/typescript/3178C6", alt: "TypeScript" },
+  { src: "https://cdn.simpleicons.org/react/61DAFB", alt: "React" },
+  { src: "https://cdn.simpleicons.org/nodedotjs/5FA04E", alt: "Node.js" },
+  { src: "https://cdn.simpleicons.org/python/3776AB", alt: "Python" },
+  { src: "https://cdn.simpleicons.org/supabase/3ECF8E", alt: "Supabase" },
+  { src: "https://cdn.simpleicons.org/n8n/EA4B71", alt: "n8n" },
+  { src: "https://cdn.simpleicons.org/tailwindcss/06B6D4", alt: "Tailwind CSS" },
+  { src: "https://cdn.simpleicons.org/vercel/FFFFFF", alt: "Vercel" },
+  { src: "https://cdn.simpleicons.org/cloudflare/F38020", alt: "Cloudflare" },
+]
 
 export function Hero() {
   const scrollToProjects = () => {
-    const element = document.getElementById("projects")
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
@@ -17,142 +27,71 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 overflow-hidden"
     >
-      <ThreeScene />
+      <div className="absolute inset-0 -z-10 opacity-40 motion-reduce:hidden">
+        <ThreeScene />
+      </div>
+      <div className="absolute inset-0 -z-10 bg-grid opacity-[0.15]" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/0 via-background/60 to-background" />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background -z-5" />
+      <div className="container mx-auto max-w-5xl relative z-10">
+        <div className="flex flex-col items-center text-center animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-card/40 backdrop-blur-sm mb-8">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 animate-ping" />
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary" />
+            </span>
+            <span className="font-mono text-[11px] tracking-wide text-muted-foreground">
+              available for new projects
+            </span>
+          </div>
 
-      <div className="container mx-auto text-center animate-fade-in-up relative z-10">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 animate-fade-in-up">
-          <Sparkles className="h-4 w-4 text-primary" />
-          <span className="text-sm font-medium text-primary">I.T. Systems Consultant</span>
-        </div>
+          <p className="eyebrow mb-4">// full-stack developer · systems architect</p>
 
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground mb-6 text-balance">
-          Jan Kane T. Reroma
-        </h1>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-semibold tracking-tight text-foreground mb-6 text-balance">
+            Jan Kane T. <span className="bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text text-transparent">Reroma</span>
+          </h1>
 
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <Code2 className="h-6 w-6 text-primary" />
-          <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground text-balance">
-            Full-Stack Developer | Systems Developer
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mb-4 leading-relaxed text-balance">
+            I design and deploy <span className="text-foreground">production-grade systems</span> that streamline operations through advanced API integrations, automated workflows, and intelligent data pipelines.
           </p>
-        </div>
 
-        <p className="text-lg sm:text-xl text-foreground/70 max-w-2xl mx-auto mb-12 leading-relaxed">
-          Crafting immersive digital experiences with cutting-edge technologies and pixel-perfect precision
-        </p>
+          <p className="text-sm sm:text-base text-muted-foreground/80 max-w-2xl mb-10 leading-relaxed">
+            Currently building automation infrastructure at{" "}
+            <span className="font-mono text-foreground/90">Powerhouse Ventures</span> (Sydney) and{" "}
+            <span className="font-mono text-foreground/90">Simple.biz / Gridline Analytics</span> (New York).
+          </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 mb-12 opacity-80">
-          <img
-            src="https://cdn.simpleicons.org/nextdotjs/FFFFFF"
-            alt="Next.js"
-            title="Next.js"
-            className="h-8 w-auto dark:opacity-90"
-            loading="lazy"
-          />
-          <img
-            src="https://cdn.simpleicons.org/typescript/3178C6"
-            alt="TypeScript"
-            title="TypeScript"
-            className="h-8 w-auto"
-            loading="lazy"
-          />
-          <img
-            src="https://cdn.simpleicons.org/react/61DAFB"
-            alt="React"
-            title="React"
-            className="h-8 w-auto animate-spin motion-reduce:animate-none"
-            style={{ animationDuration: "14s" }}
-            loading="lazy"
-          />
-          <img
-            src="https://cdn.simpleicons.org/javascript/F7DF1E"
-            alt="JavaScript"
-            title="JavaScript"
-            className="h-8 w-auto"
-            loading="lazy"
-          />
-          <img
-            src="https://cdn.simpleicons.org/python/3776AB"
-            alt="Python"
-            title="Python"
-            className="h-8 w-auto"
-            loading="lazy"
-          />
-          <img
-            src="https://cdn.simpleicons.org/sass/CC6699"
-            alt="Sass/SCSS"
-            title="Sass / SCSS"
-            className="h-8 w-auto"
-            loading="lazy"
-          />
-          <img
-            src="https://cdn.simpleicons.org/tailwindcss/06B6D4"
-            alt="Tailwind CSS"
-            title="Tailwind CSS"
-            className="h-8 w-auto"
-            loading="lazy"
-          />
-          <img
-            src="https://cdn.simpleicons.org/n8n/FF6D5A"
-            alt="n8n"
-            title="n8n"
-            className="h-8 w-auto"
-            loading="lazy"
-          />
-        </div>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-16">
+            <Button size="lg" onClick={scrollToProjects} className="group min-w-[180px]">
+              View my work
+              <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+              className="group min-w-[180px]"
+            >
+              Get in touch
+              <ArrowUpRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </Button>
+          </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 mb-12 opacity-80">
-          <img
-            src="https://cdn.simpleicons.org/github/FFFFFF"
-            alt="GitHub"
-            title="GitHub"
-            className="h-8 w-auto dark:opacity-90"
-            loading="lazy"
-          />
-          <img
-            src="https://cdn.simpleicons.org/git/F05032"
-            alt="Git"
-            title="Git"
-            className="h-8 w-auto"
-            loading="lazy"
-          />
-          <img
-            src="https://cdn.simpleicons.org/wordpress/21759B"
-            alt="WordPress"
-            title="WordPress"
-            className="h-8 w-auto"
-            loading="lazy"
-          />
-          <img
-            src="https://cdn.simpleicons.org/supabase/3ECF8E"
-            alt="Supabase"
-            title="Supabase"
-            className="h-8 w-auto"
-            loading="lazy"
-          />
-          <img
-            src="https://cdn.simpleicons.org/vercel/FFFFFF"
-            alt="Vercel"
-            title="Vercel"
-            className="h-8 w-auto dark:opacity-90"
-            loading="lazy"
-          />
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" onClick={scrollToProjects} className="group min-w-[180px]">
-            View My Work
-            <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-            className="min-w-[180px]"
-          >
-            Get In Touch
-          </Button>
+          <div className="w-full max-w-3xl">
+            <p className="eyebrow mb-4">// stack</p>
+            <div className="flex flex-wrap items-center justify-center gap-x-7 gap-y-4 opacity-70 hover:opacity-100 transition-opacity">
+              {techStack.map((t) => (
+                <img
+                  key={t.alt}
+                  src={t.src}
+                  alt={t.alt}
+                  title={t.alt}
+                  className="h-6 w-auto grayscale hover:grayscale-0 transition-all"
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

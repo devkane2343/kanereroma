@@ -1,86 +1,67 @@
-import { Card } from "@/components/ui/card"
-import { Code2, Sparkles, Zap, Rocket } from "lucide-react"
-
-const skills = [
-  {
-    icon: Code2,
-    title: "Full Stack",
-    description: "React, Next.js, TypeScript, Node.js",
-  },
-  {
-    icon: Sparkles,
-    title: "AI-Powered",
-    description: "Leveraging AI for efficient development",
-  },
-  {
-    icon: Zap,
-    title: "Proven Experience",
-    description: "3+ years in production systems",
-  },
-  {
-    icon: Rocket,
-    title: "Results-Driven",
-    description: "Delivering impactful solutions",
-  },
+const stats = [
+  { value: "3+", label: "yrs production" },
+  { value: "10+", label: "systems shipped" },
+  { value: "3", label: "countries served" },
+  { value: "2", label: "concurrent roles" },
 ] as const
 
 export function About() {
   return (
-    <section id="about" className="min-h-screen flex flex-col justify-center py-8 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="about" className="py-28 px-4 sm:px-6 lg:px-8 border-t border-border">
       <div className="container mx-auto max-w-5xl">
-        <div className="text-center mb-8 animate-fade-in-up">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">About Me</h2>
-          <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
+        <div className="mb-12">
+          <p className="eyebrow mb-3">// 01 · about</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground max-w-3xl">
+            I immerse myself in a client&apos;s business before a single line of code is written.
+          </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
-          <div className="animate-fade-in-up">
-            <div className="aspect-square rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center max-w-xs mx-auto overflow-hidden transition-transform duration-500 hover:scale-[1.02]">
+        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-12 items-start mb-16">
+          <div className="relative">
+            <div className="aspect-[4/5] rounded-lg overflow-hidden border border-border bg-card max-w-xs">
               <img
                 src="/ProfP.png"
-                alt="Profile"
-                className="rounded-xl w-full h-full object-cover"
+                alt="Jan Kane T. Reroma"
+                className="w-full h-full object-cover"
                 width={300}
-                height={300}
+                height={400}
               />
+            </div>
+            <div className="mt-4 space-y-1 max-w-xs">
+              <p className="font-mono text-xs text-muted-foreground">based in</p>
+              <p className="text-sm text-foreground">Minglanilla, Cebu · Philippines</p>
             </div>
           </div>
 
-          <div className="space-y-5">
-            <p className="text-base sm:text-lg text-foreground/90 leading-relaxed animate-about-para">
-              I&apos;m a <strong>full stack developer</strong> who bridges design and engineering—building web applications
-              that are both robust and delightful to use. I thrive on turning complex requirements into intuitive, 
-              scalable solutions that make a real impact.
+          <div className="space-y-6 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p className="animate-about-para">
+              I&apos;m a <span className="text-foreground">Full-Stack Web Developer and Systems Architect</span> specializing in
+              Next.js, React, Node.js, Supabase, n8n, and AI Automation. I design and deploy scalable, production-grade
+              systems that streamline operations through advanced API integrations, automated workflows, and intelligent
+              data pipelines.
             </p>
-            <p className="text-base sm:text-lg text-foreground/90 leading-relaxed animate-about-para-delayed">
-              With over three years of experience delivering production systems for government institutions and 
-              private organizations, I combine <strong>modern tech stacks</strong> with <strong>AI-assisted workflows</strong> to 
-              ship faster without compromising quality. My focus: clean architecture, thoughtful UX, and code that 
-              stands the test of time.
+            <p className="animate-about-para-delayed">
+              What sets me apart is cross-domain thinking — spanning <span className="text-foreground">development, business
+              logic, and systems architecture</span>. I deliver end-to-end solutions that don&apos;t just work technically,
+              but drive real operational change: enhanced efficiency, reduced costs, and measurable business impact.
+            </p>
+            <p className="animate-about-para-delayed">
+              Currently working two concurrent roles — automation infrastructure at Powerhouse Ventures (Sydney, AU) by
+              day, and AI/API systems at Simple.biz / Gridline Analytics (New York, US) by night.
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {skills.map((skill, index) => {
-            const IconComponent = skill.icon
-            return (
-              <Card
-                key={`${skill.title}-${index}`}
-                className="about-skill-card group p-4 border-border/50 text-center cursor-default
-                  transition-all duration-500 ease-out
-                  hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5
-                  hover:border-primary/30 hover:bg-card/80
-                  [&:hover_svg]:scale-110 [&:hover_svg]:transition-transform [&:hover_svg]:duration-300"
-              >
-                <div className="rounded-lg bg-primary/5 p-3 w-fit mx-auto mb-3 transition-colors duration-300 group-hover:bg-primary/10">
-                  <IconComponent className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-sm font-semibold text-foreground mb-1.5">{skill.title}</h3>
-                <p className="text-xs text-muted-foreground">{skill.description}</p>
-              </Card>
-            )
-          })}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-lg overflow-hidden border border-border">
+          {stats.map((s) => (
+            <div
+              key={s.label}
+              className="bg-background p-6 sm:p-8 hover:bg-card transition-colors"
+            >
+              <p className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-1">{s.value}</p>
+              <p className="font-mono text-xs text-muted-foreground">{s.label}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

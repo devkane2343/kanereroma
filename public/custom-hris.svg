@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#0d1828"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bg3)"/>
+  <rect x="0" y="0" width="240" height="800" fill="#0a111c"/>
+  <text x="32" y="60" font-family="ui-monospace, monospace" font-size="13" fill="#22d3ee">▍ HRIS</text>
+  <g font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">
+    <text x="32" y="120">Dashboard</text>
+    <text x="32" y="160">Payroll</text>
+    <text x="32" y="200">Attendance</text>
+    <text x="32" y="240">Employees</text>
+    <text x="32" y="280">Gift Tracker</text>
+    <text x="32" y="320">Orphanage Budget</text>
+    <text x="32" y="360">Reports</text>
+  </g>
+  <rect x="20" y="105" width="200" height="28" rx="6" fill="#1e293b"/>
+  <text x="32" y="124" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">Dashboard</text>
+  <text x="280" y="80" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#e2e8f0">Payroll Period · Apr 2026</text>
+  <g font-family="ui-monospace, monospace" font-size="11" fill="#64748b">
+    <rect x="280" y="120" width="300" height="120" rx="10" fill="#0f172a" stroke="#1e293b"/>
+    <text x="300" y="148">TOTAL PAYROLL</text>
+    <text x="300" y="200" font-family="system-ui, sans-serif" font-size="32" font-weight="600" fill="#e2e8f0">₱1,284,000</text>
+    <rect x="600" y="120" width="300" height="120" rx="10" fill="#0f172a" stroke="#1e293b"/>
+    <text x="620" y="148">EMPLOYEES</text>
+    <text x="620" y="200" font-family="system-ui, sans-serif" font-size="32" font-weight="600" fill="#e2e8f0">42</text>
+    <rect x="920" y="120" width="320" height="120" rx="10" fill="#0f172a" stroke="#1e293b"/>
+    <text x="940" y="148">ATTENDANCE</text>
+    <text x="940" y="200" font-family="system-ui, sans-serif" font-size="32" font-weight="600" fill="#e2e8f0">96.4%</text>
+  </g>
+  <rect x="280" y="270" width="960" height="500" rx="10" fill="#0f172a" stroke="#1e293b"/>
+  <text x="300" y="305" font-family="ui-monospace, monospace" font-size="12" fill="#64748b">EMPLOYEE ROSTER</text>
+  <g font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">
+    <line x1="300" y1="330" x2="1220" y2="330" stroke="#1e293b"/>
+    <text x="300" y="360">Name</text><text x="600" y="360">Role</text><text x="820" y="360">Rate</text><text x="1000" y="360">Status</text>
+    <line x1="300" y1="380" x2="1220" y2="380" stroke="#1e293b"/>
+    <text x="300" y="410" fill="#e2e8f0">Maria Santos</text><text x="600" y="410">Lead Designer</text><text x="820" y="410">₱65,000</text><text x="1000" y="410" fill="#22d3ee">● Active</text>
+    <line x1="300" y1="430" x2="1220" y2="430" stroke="#1e293b"/>
+    <text x="300" y="460" fill="#e2e8f0">James Reyes</text><text x="600" y="460">Developer</text><text x="820" y="460">₱58,000</text><text x="1000" y="460" fill="#22d3ee">● Active</text>
+    <line x1="300" y1="480" x2="1220" y2="480" stroke="#1e293b"/>
+    <text x="300" y="510" fill="#e2e8f0">Anna Cruz</text><text x="600" y="510">Project Manager</text><text x="820" y="510">₱72,000</text><text x="1000" y="510" fill="#22d3ee">● Active</text>
+    <line x1="300" y1="530" x2="1220" y2="530" stroke="#1e293b"/>
+    <text x="300" y="560" fill="#e2e8f0">Mark Torres</text><text x="600" y="560">Operations</text><text x="820" y="560">₱48,000</text><text x="1000" y="560" fill="#facc15">● On Leave</text>
+    <line x1="300" y1="580" x2="1220" y2="580" stroke="#1e293b"/>
+    <text x="300" y="610" fill="#e2e8f0">Lara Domingo</text><text x="600" y="610">QA Engineer</text><text x="820" y="610">₱52,000</text><text x="1000" y="610" fill="#22d3ee">● Active</text>
+  </g>
+  <text x="640" y="780" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#475569">CUSTOM HRIS · GRIDLINE ANALYTICS</text>
+</svg>
